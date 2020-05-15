@@ -16,12 +16,14 @@ custom_stop <- tribble(
   "covid","CUSTOM",
   "quarantine","CUSTOM",
   "19","CUSTOM",
-  "lang","CUSTOM",
   "ang","CUSTOM",
+  "lang","CUSTOM",
   "gcq","CUSTOM",
-  "natin","CUSTOM"
+  "natin","CUSTOM",
   "na","CUSTOM",
-  "hindi","CUSTOM")
+  "hindi","CUSTOM",
+  "enhanced","CUSTOM",
+  "iatf","CUSTOM")
 
 #Tokenizing of articles
 cnn_tokens <- cnn %>%
@@ -44,3 +46,5 @@ star_tokens <- star %>%
   anti_join(custom_stop) %>%
   count(word, sort=TRUE)
 star_tokens
+
+
